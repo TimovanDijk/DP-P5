@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "hu.nl.hibernate.OVChipkaart" table = "OV_Chipkaart">
+
+        <meta attribute = "class-description">
+        </meta>
+
+        <id name = "kaartNum" type = "int" column = "kaartNummer">
+            <generator class="sequence-identity">
+                <param name="sequence">hibernate_OVID</param>
+            </generator>
+        </id>
+
+        <property name = "geldigTot" column = "geldigTot" type = "date"/>
+        <property name = "klasse" column = "klasse" type = "int"/>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.4//EN"  
+          "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">
+  
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="connection.url">jdbc:oracle:thin:@//ondora04.hu.nl:8521/educ10</property>
+        <property name="connection.username">tocba</property>
+        <property name="connection.password">tocba</property>
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.jdbc.use_get_generated_keys">true</property>
+    <mapping resource="Log.hbm.xml"/>
+        <mapping class="hu.nl.hibernate.Reiziger"/>
+        <mapping class="hu.nl.hibernate.OVChipkaart"/>
+    </session-factory>
+</hibernate-configuration> 
